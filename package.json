@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "compile-contract-types": "typechain --target ethers-v5 --out-dir './contracts/types' './contracts/*.json'",
-    "postinstall": "yarn compile-contract-types"
+    "postinstall": "yarn compile-contract-types",
+    "synpress:run": "dotenv -e .env synpress run -- --configFile ./tests/e2e/customConfig.json -ne"
   },
   "dependencies": {
     "@ethersproject/bignumber": "^5.5.0",
@@ -18,6 +19,7 @@
     "@ethersproject/wallet": "^5.5.0",
     "@metamask/detect-provider": "^1.2.0",
     "@metamask/onboarding": "^1.0.1",
+    "@synthetixio/synpress": "^1.2.0",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "@web3-react/walletconnect-connector": "^6.2.8",

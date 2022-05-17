@@ -55,3 +55,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+## Testing
+
+- The tests are written with [Synpress](https://github.com/synthetixio/synpress)
+
+- Additional Synpress [Commands](https://github.com/synthetixio/synpress/blob/master/support/index.d.ts)
+
+- Additional Cypress [Docs](https://docs.cypress.io/)
+
+In order to run the tests:
+
+1. For modules setup & install, use Node version v16.14.0 (it might not work with other versions)
+2. Make sure to add the required .env variables for Synpress
+3. Make sure to update the customConfig.json file with the desired settings (baseUrl should points to the desired url during the tests, for example, if you want to test on google the url should be https://google.com)
+4. Build the next app `npm run build`
+5. Run the next app `npm run dev`
+6. Open new terminal and run the tests `npm run synpress:run`
